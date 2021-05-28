@@ -5,9 +5,10 @@
  Description:       GCI Tools for WordPress: <br>AntiSpam, Admin Links, Cache Primer, Media Player, Iframe, Banners, Bible, PHP Info
  Author:            Bret Miller, Grace Communion International
  Author URI:        https://www.facebook.com/profile.php?id=100000028974466
- Version:           1.6.5
+ Version:           1.6.5.1
  Tested up to:      5.7.-
  GitHub Plugin URI: bret-miller/gci-tools
+ Primary Branch:    main
 
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
