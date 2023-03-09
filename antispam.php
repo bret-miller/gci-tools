@@ -33,9 +33,14 @@ function gci_antispam_check_comment($comment) {
 	}
 	if ($gci_isspam) {
 		if(function_exists('akismet_init')) {
-			add_filter('pre_comment_approved', create_function('$a', 'return \'spam\';'));
+			add_filter('pre_comment_approved', function($a) {
+				return 'spam';
+			});
 		} else {
-			add_filter('comment_post', create_function('$id', 'wp_delete_comment($id); die(\'This comment has been deleted by GCI-AntiSpam\');'));
+			add_filter('comment_post', function($id) {
+				wp_delete_comment($id); 
+				die('This comment has been deleted by GCI-AntiSpam');
+			});
 		}
 	}
 	return $comment;
